@@ -5,11 +5,11 @@
 {% endblock %}
 
 {% block main %}
-    <h1>Создать заявку</h1>
+    <h1>Создать заяву</h1>
     <form method="post">
         {% csrf_token %}
-        {{ form.name }}<br>
-        {{ form.task }}<br>
+        {{ form.title }}<br>
+        {{ form.description }}<br>
         <button type="submit" class="btn btn-success">Добавить</button>
         <span>{{ error }}</span>
     </form>

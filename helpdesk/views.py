@@ -8,8 +8,8 @@ def index(request):
     return render(request, 'helpdesk/index.html', {'title': 'Главная ептыть нах', 'tasks': Tickets})
 
 
-def about(request):
-    return render(request, 'helpdesk/about.html')
+def signin(request):
+    return render(request, 'helpdesk/signin.html')
 
 
 def create(request):
