@@ -2,3 +2,4 @@
 /helpdesk/migrations/0001_initial.py
 /.idea/
 /.virtualenv/
+/__pycache__/
