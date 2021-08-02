@@ -1,5 +1,5 @@
 /db.sqlite3
-/helpdesk/migrations/0001_initial.py
+/helpdesk/migrations/
 /.idea/
 /.virtualenv/
 /__pycache__/
