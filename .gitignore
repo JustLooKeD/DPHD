@@ -3,3 +3,6 @@
 /.idea/
 /.virtualenv/
 /__pycache__/
+/helpdesk/__pycache__/
+/DPHD/__pycache__/
+/.venv/
