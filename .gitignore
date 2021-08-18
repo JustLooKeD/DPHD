@@ -6,3 +6,4 @@
 /helpdesk/__pycache__/
 /DPHD/__pycache__/
 /.venv/
+/DPHD/apps/helpdesk/migrations/__init__.py

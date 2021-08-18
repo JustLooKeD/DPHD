@@ -5,15 +5,15 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
 
 <header>
-    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
-        <span class="fs-4">HelpDesk</span>
-        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+    <div class="d-flex flex-column flex-md-row align-items-center mb-4 border-bottom justify-content-around">
+        <span class="fs-3">HelpDesk</span>
+        <nav class="d-flex justify-content-around">
             <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'home' %}">Главная</a>
             <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'signin' %}">Авторизоваться</a>
             <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'create' %}">Создать заявку</a>
@@ -25,5 +25,6 @@
     {% block main %}{% endblock %}
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 </html>
