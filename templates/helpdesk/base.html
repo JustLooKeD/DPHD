@@ -10,16 +10,29 @@
 </head>
 <body>
 
-<header>
+    <header>
+
     <div class="d-flex flex-column flex-md-row align-items-center mb-4 border-bottom justify-content-around">
         <span class="fs-3">HelpDesk</span>
         <nav class="d-flex justify-content-around">
-            <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'home' %}">Главная</a>
-            <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'signin' %}">Авторизоваться</a>
+            <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'home' %}">Мои заявки</a>
             <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'create' %}">Создать заявку</a>
+            {% if user.is_authenticated %}
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">{{ user.get_username }}</button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Сменить пароль</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Выйти</a></li>
+                    </ul>
+                </div>
+            {% else %}
+                <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'login' %}">Авторизоваться</a>
+            {% endif %}
         </nav>
     </div>
-</header>
+
+    </header>
 
 <div class="container">
     {% block main %}{% endblock %}

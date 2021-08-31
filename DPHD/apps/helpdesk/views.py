@@ -12,8 +12,8 @@ def adm(request):
     return render(request, 'helpdesk/adm/panel.html')
 
 
-def signin(request):
-    return render(request, 'helpdesk/signin.html')
+def login(request):
+    return render(request, 'registration/login.html')
 
 
 def create(request):
