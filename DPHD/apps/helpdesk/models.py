@@ -36,8 +36,6 @@ class Ticket(models.Model):
     create_date = models.DateTimeField('Дата создания заявки')
     status = models.CharField('Статус заявки', max_length=15)
 
-    # executant = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
-
     def __str__(self):
         return f"{self.title}"
 

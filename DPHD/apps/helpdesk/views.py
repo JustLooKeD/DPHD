@@ -1,11 +1,13 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .models import Ticket
 from .forms import TicketForm
 
 
+@login_required
 def index(request):
     Tickets = Ticket.objects.order_by('-id')
-    return render(request, 'helpdesk/index.html', {'title': 'Главная ептыть нах', 'tasks': Tickets})
+    return render(request, 'helpdesk/index.html')
 
 
 def adm(request):
@@ -16,6 +18,11 @@ def login(request):
     return render(request, 'registration/login.html')
 
 
+def logout(request):
+    return render(request, 'registration/logged_out.html')
+
+
+@login_required
 def create(request):
     error = ''
     if request.method == 'POST':

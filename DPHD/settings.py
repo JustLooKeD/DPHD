@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'debug_toolbar',
     'DPHD.apps.helpdesk.apps.HelpdeskConfig'
 ]
 
@@ -48,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware', #Связывает пользователей, использующих сессии, запросами.
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware', #debug toolbar
 ]
 
 ROOT_URLCONF = 'DPHD.urls'
@@ -127,3 +129,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/'
+
+
+def show_toolbar(request):
+    return True
+SHOW_TOOLBAR_CALLBACK = show_toolbar
